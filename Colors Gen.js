@@ -14,7 +14,7 @@ function createColorSection(color) {
 	const colorSection = document.createElement("div");
 	colorSection.innerHTML = `
     <div class="bg-[${color}] flex justify-center items-center text-4xl font-bold hover:${textColor} rounded-lg hover:scale-[0.95] cursor-pointer transition h-[128px] text-transparent copy-element" onclick="Copy('${color}', this)">Copy</div>
-    <div class="text-center">${color}</div>
+    <div class="text-center uppercase font-bold">${color}</div>
   `;
 	return colorSection;
 }
