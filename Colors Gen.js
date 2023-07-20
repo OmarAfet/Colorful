@@ -13,7 +13,7 @@ function createColorSection(color) {
 
 	const colorSection = document.createElement("div");
 	colorSection.innerHTML = `
-    <div class="bg-[${color}] flex justify-center items-center text-4xl font-bold hover:${textColor} rounded-lg hover:scale-[0.95] cursor-pointer transition h-[128px] text-transparent copy-element" onclick="Copy('${color}', this)">Copy</div>
+    <div class="bg-[${color}] flex justify-center items-center text-4xl font-bold hover:${textColor} rounded-lg hover:scale-[0.95] cursor-pointer transition h-[128px] text-transparent copy-element select-none" onclick="Copy('${color}', this)">Copy</div>
     <div class="text-center uppercase font-bold">${color}</div>
   `;
 	return colorSection;
@@ -23,7 +23,7 @@ function createColorCategory(categoryName, categoryColors) {
 	const categoryContainer = document.createElement("div");
 	categoryContainer.innerHTML = `
     <div class="text-4xl font-bold text-center mb-8 uppercase">${categoryName}</div>
-    <div class="grid mb-12 grid-cols-9 gap-2 px-16"></div>
+    <div class="grid mb-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9  gap-2 px-16"></div>
   `;
 	const colorGrid = categoryContainer.querySelector(".grid");
 
